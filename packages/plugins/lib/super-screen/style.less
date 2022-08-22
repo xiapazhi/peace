@@ -1,0 +1,661 @@
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-content-between {
+  justify-content: space-between;
+}
+
+.flex-content-around {
+  justify-content: space-around;
+}
+
+.flex-content-start {
+  justify-content: flex-start;
+}
+
+.flex-content-end {
+  justify-content: flex-end;
+}
+
+.flex-item-center {
+  align-items: center;
+}
+
+.flex-item-start {
+  align-items: flex-start;
+}
+
+.flex-item-end {
+  align-items: flex-end;
+}
+
+.flex-item-stretch {
+  align-items: stretch;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.custom-modal {
+  .content {
+    .rhap_time {
+      font-size: 24px;
+    }
+  }
+
+}
+
+/* 谷歌滚动条样式调整*/
+#menu-scroll::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 3px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+
+#menu-scroll::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 5px;
+  box-shadow: inset 0 0 1px rgba(0, 110, 255, 0.5);
+  background: rgba(0, 110, 255, 1);
+}
+
+#menu-scroll::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow: inset 0 0 1px rgba(5, 54, 100, 0.54);
+  border-radius: 5px;
+  background: rgba(5, 54, 100, 0.54);
+}
+
+#super-screen-wrapper {
+  width: 100%;
+  height: 1080px;
+  background-color: #0B1C4D;
+  color: #fff;
+
+  .exit_png {
+    width: 20px;
+    height: 17px;
+    cursor: pointer;
+  }
+
+  .audio {
+    width: 150px;
+  }
+
+  #dv-full-screen-container {
+    // background-image: url("/assets/images/screen/bg.webp");
+    background-color: #032d65;
+    background-size: 100% 100%;
+    z-index: 99;
+    // box-shadow: 0 0 3px blue;
+    display: flex;
+    flex-direction: column;
+
+    /* 大屏antd 默认样式修改 */
+    /* select */
+    .ant-drawer-body {
+      overflow-y: auto;
+    }
+
+    .ant-drawer-body::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 8px;
+      /*高宽分别对应横竖滚动条的尺寸*/
+      height: 1px;
+    }
+
+    .ant-drawer-body::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 10px;
+      background-color: #0057C9;
+      background-image: -webkit-linear-gradient(45deg,
+          rgba(255, 255, 255, 0.2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.2) 75%,
+          transparent 75%,
+          transparent);
+    }
+
+    .ant-drawer-body::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: #ededed;
+      border-radius: 10px;
+    }
+
+    .ant-select {
+      color: #fff;
+    }
+
+    .ant-select-selector {
+      background-color: transparent;
+      border: 1px solid rgb(42 100 156)
+    }
+
+    .ant-select-arrow {
+      color: #fff;
+    }
+  }
+
+  .error {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  /* antd 样式调整 */
+
+  .ant-input {
+    background-color: #032d65;
+    color: #0386e1;
+    border: 1px solid #032d65;
+  }
+
+  .ant-btn-background-ghost {
+    border: 1px solid rgb(42 100 156);
+    font-size: 16px;
+    font-weight: 400;
+    color: #8ec8f9;
+    line-height: 16px;
+  }
+
+  .ant-drawer-content {
+    background-color: rgba(3, 60, 121, 0.9)
+  }
+
+  .ant-drawer-header {
+    color: #fff;
+    background: #0057c9;
+  }
+
+  .ant-drawer-title {
+    color: #fff;
+  }
+
+  .ant-empty {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .tunnel-drawer-content-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .item-active {
+    .ant-btn-background-ghost {
+      background: #04377a;
+      border: 1px solid #006eff;
+    }
+  }
+
+  /* 大屏头部 */
+  .main-header {
+    height: 92px;
+    display: flex;
+    // justify-content: space-between;
+    // align-items: flex-end;
+    background: url("/assets/images/screen/header_bg.png") no-repeat;
+    background-size: 100% 100%;
+
+    .left {
+      width: 38.5%;
+      font-size: 20px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+
+      .date {
+        position: absolute;
+        left: 18%;
+        top: 4%;
+      }
+
+      .weather {
+        position: absolute;
+        left: 5%;
+        top: 3%;
+      }
+    }
+
+    .right {
+      width: 7%;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      // justify-content: space-around;
+
+      .ant-select-arrow {
+        color: #fff;
+      }
+    }
+
+    .middle {
+      width: 54.5%;
+      font-size: 40px;
+      font-family: YouSheBiaoTiHei;
+      font-weight: normal;
+      line-height: 2;
+      color: #ffffff;
+      // text-shadow: 0px 2px 12px rgba(3, 8, 13, 0.6);
+      background: linear-gradient(0deg, #b2d4fa 0%, #ffffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  /* 大屏导航 */
+  .main-menu {
+    height: 60px;
+    // width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .menu-nomal {
+      background-image: url("/assets/images/screen/menu.webp");
+    }
+
+    .menu-item {
+      display: flex;
+      justify-items: flex-end;
+      align-items: flex-end;
+      text-align: center;
+      width: 150px;
+      height: 50px;
+      background-size: 100% 100%;
+
+      .menu-text {
+        width: 150px;
+        font-size: 22px;
+        font-family: YouSheBiaoTiHei;
+        font-weight: 400;
+        color: #8ec8f9;
+        opacity: 0.82;
+        height: 38px;
+      }
+    }
+
+    .menu-active {
+      background-image: url("/assets/images/screen/menu_active.webp");
+
+      .menu-text {
+        color: #ccdcf3;
+        opacity: 1;
+        background: linear-gradient(0deg,
+            #0094f7 0%,
+            #5abcfd 18.505859375%,
+            #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  /* 大屏内容 */
+  .main-container {
+    height: calc(~"100% - 92px");
+    display: flex;
+    justify-content: space-between;
+
+    .border-box-content {
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+    }
+
+    /* 大屏左侧 */
+    .left-container {
+      position: absolute;
+      left: 21px;
+      top: 108px;
+      width: 480px;
+      box-sizing: border-box;
+      height: 952px;
+      // background-color: #0094f7;
+    }
+
+    /* 大屏右侧 */
+    .right-container {
+      position: absolute;
+      right: 21px;
+      top: 108px;
+      width: 480px;
+      height: 952px;
+      box-sizing: border-box;
+      // background-color: #0094f7;
+    }
+
+
+    /* 报警统计 */
+    .device-alarm-left {
+      width: 45%;
+      height: 237px;
+      padding-top: 30px;
+    }
+
+    .device-alarm-right {
+      width: 55%;
+      height: 260px;
+      color: rgba(240, 242, 245, 1);
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      padding-right: 35px;
+
+      .device-alarm-item {
+        width: 100%;
+        color: rgba(240, 242, 245, 1);
+        font-size: 14px;
+        height: 35px;
+        // padding-top: 15px;
+        background-color: #002562;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+        color: #93B7FF;
+        font-size: 14px;
+
+        span {
+          margin-left: 6px;
+        }
+      }
+
+      .device-alarm-item .dot {
+        width: 12px;
+        height: 12px;
+        // background: linear-gradient(16deg, #176ae7 0%, #020e23 100%);
+        border-radius: 2px;
+        margin-right: 3px;
+      }
+
+      .device-alarm-item .count {
+        font-size: 16px;
+        font-weight: bold;
+
+      }
+    }
+
+    .rain-water {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      .active {
+        width: 88px;
+        height: 28px;
+        background: linear-gradient(180deg, #3877F2 0%, #1C3D7C 100%);
+        text-align: center;
+        line-height: 2;
+        cursor: pointer;
+      }
+
+      .inactive {
+        width: 88px;
+        height: 28px;
+        background: #1C3D7C;
+        color: #C4C4C4;
+        text-align: center;
+        line-height: 2;
+        cursor: pointer;
+      }
+    }
+
+    .gis-search-select {
+      .ant-select-selector {
+        background-color: rgba(9, 22, 44, 0.75) !important;
+        border: rgba(0, 74, 217, 1) 1px solid !important;
+        height: 24px;
+      }
+
+      .ant-select-selection-item {
+        color: #FFFFFF !important;
+        line-height: 24px !important;
+      }
+
+      .ant-select-arrow {
+        color: inherit;
+        color: rgba(56, 119, 242, 1) !important;
+      }
+
+
+    }
+
+
+  }
+
+  /* 装饰框容器 */
+
+  .box-container {
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    .box-title {
+      display: flex;
+      flex-direction: row;
+      height: 43px;
+      // background-image: url("/assets/images/screen/box-title.png");
+      // background-size: 100% 100%;
+
+      .text {
+        width: 40%;
+        margin-left: 40px;
+        font-size: 24px;
+        font-weight: 400;
+        font-family: YouSheBiaoTiHei;
+        color: #FFFFFF;
+      }
+
+      .subtitle {
+        width: 60%;
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    /* 滚动列表 */
+    .scroll-board {
+      width: 460px;
+      height: 220px;
+      margin-top: 10px;
+      margin-left: 6px;
+
+      .header {
+        height: 30px;
+        // border-top: 1px solid #0047ba;
+        // border-bottom: 1px solid #0047ba;
+        width: 460px !important;
+        min-width: 460px !important;
+        background-image: url("/assets/images/screen/list-head.png");
+        background-size: 100% 100%;
+        color: #7BA8FF;
+
+        .header-item {
+          // background: rgba(12, 49, 110, 0.3);
+          margin-right: 10px;
+        }
+      }
+
+      .rows {
+        .row-item {
+          font-size: 16px;
+        }
+
+        .row-item:hover {
+          background-image: url("/assets/images/screen/scrrll_board_row_bg.webp");
+          background-size: 100% 100%;
+          color: #9ac8fc;
+        }
+      }
+    }
+
+    .scroll-board-multi {
+      width: 460px;
+      height: 220px;
+      margin-top: 10px;
+      margin-left: 6px;
+
+      .header {
+        height: 30px;
+        // border-top: 1px solid #0047ba;
+        // border-bottom: 1px solid #0047ba;
+        width: 460px !important;
+        min-width: 460px !important;
+        color: #7BA8FF;
+
+        .header-item {
+          // background: rgba(12, 49, 110, 0.3);
+          margin-right: 10px;
+        }
+      }
+
+      .rows {
+        .row-item {
+          // margin-bottom: 2px;
+          font-size: 16px;
+          overflow: hidden;
+          line-height: initial !important;
+          align-items: center;
+          background-image: url("/assets/images/screen/row_bg.png");
+          background-size: 100% 100%;
+
+          .ceil {
+            white-space: normal !important;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+          }
+        }
+
+        .row-item:hover {
+          background-image: url("/assets/images/screen/scrrll_board_row_bg.webp");
+          background-size: 100% 100%;
+          color: #9ac8fc;
+        }
+      }
+    }
+
+  }
+
+  .box-normal {
+    width: 480px;
+    height: 304px;
+    // border: 1px solid rgba(0, 133, 246, 0.4); // background-image: url("/assets/images/screen/box.webp");
+    background-image: url("/assets/images/screen/box_bg.png");
+    background-size: 100% 100%;
+
+    .box-title {
+      .text {
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .box-lengthen {
+    width: 1665px;
+    height: 274px;
+    background-image: url("/assets/images/screen/box_lengthen.webp");
+
+    .box-title {
+      background: none;
+
+      .text {
+        line-height: 1.8;
+      }
+    }
+  }
+
+  /* GIS */
+  .gis-infowindow {
+    background-image: url("/assets/images/screen/infowindow_bg_custom.png");
+    background-size: 100% 100%;
+    width: 242px;
+    height: 360px;
+
+    .close {
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      right: 1%;
+      top: -1%;
+      cursor: pointer;
+    }
+
+    .title {
+      color: #FFFFFF;
+      font-size: 12px;
+
+      .img {
+        width: 12px;
+        height: 12px;
+        margin-left: 9px;
+        margin-right: 9px;
+      }
+    }
+
+    .content {
+      margin-top: 20px;
+      margin-left: 21px;
+
+      .left {
+        color: #E1E1E1;
+        width: 60px;
+        font-size: 12px;
+        margin-top: 8px;
+      }
+
+      .right {
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.super-dropdownClassName {
+  color: #A1C1D1 !important;
+  background-color: rgba(9, 22, 44, 0.75) !important;
+  border: 1px solid rgba(0, 74, 217, 1);
+  max-height: 200px;
+
+  .ant-select-dropdown {
+    color: #A1C1D1 !important;
+    background-color: rgba(9, 22, 44, 0.75) !important;
+  }
+
+  .ant-select-item-option-content {
+    color: #A1C1D1 !important;
+  }
+
+  .ant-select-item-option-active {
+    color: #A1C1D1 !important;
+    background-color: rgba(0, 74, 217, 1) !important;
+  }
+
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 74, 217, 1);
+  }
+}

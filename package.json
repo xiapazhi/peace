@@ -1,0 +1,10 @@
+{
+  "name": "peace",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

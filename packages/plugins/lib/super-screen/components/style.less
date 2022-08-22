@@ -1,0 +1,253 @@
+#dv-full-screen-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform-origin: left top;
+  z-index: 999;
+  transition: 0.3s;
+}
+
+#emergency-command-modal {
+  color: #fff;
+
+  .onpoint {
+    cursor: pointer;
+  }
+
+  .close {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+
+    .cell-active {
+      background-image: url("/assets/images/screen/cockpit/modal/cell_bg.png");
+      background-size: 100% 100%;
+    }
+
+    .cell {
+      padding: 6px 18px;
+      margin: 0 6px;
+      border: 1px solid #051043;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .content {
+    .left {
+      height: 95%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .right {
+      height: 95%;
+      font-size: 20px;
+      overflow-y: auto;
+
+      .task-item {
+        background: #061A2F;
+        height: 38px;
+        padding: 4px 8px;
+        margin: 8px 0;
+        font-size: 18px;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 96%;
+      }
+
+      .task-item-active {
+        background-image: url("/assets/images/screen/cockpit/modal/task_bg.png");
+        background-size: 100% 100%;
+        text-align: center;
+        height: 38px;
+        padding: 4px 8px;
+        margin: 8px 0;
+        font-size: 18px;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 96%;
+      }
+
+      .right-content {
+        background-image: url("/assets/images/screen/cockpit/modal/text_bg.png");
+        background-size: 100% 100%;
+        height: 100%;
+        width: 90%;
+        padding: 5%;
+
+        .time {
+          border-bottom: 2px solid #174683;
+          padding-bottom: 6px;
+          margin-bottom: 5%;
+          color: #c1c1c1;
+          font-weight: bold;
+        }
+
+        .content-text {
+          letter-spacing: 0.2rem;
+          word-break: break-all;
+        }
+      }
+
+
+      .yuntai {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .label {
+          background-image: url("/assets/images/screen/cockpit/modal/yuntai_label.png");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          width: fit-content;
+          padding: 6px 10px;
+          margin-bottom: 4px;
+        }
+
+        .control {
+          border: 1px solid #174683;
+          height: 85%;
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .btn-group {
+            background-image: linear-gradient(0deg,
+                #16299e,
+                #245cd0 50%,
+                #3389ff);
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: 10px 0 30px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .control-icon {
+              color: #000;
+              font-size: 28px;
+            }
+
+            .left-right {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .control-center {
+                background-color: #000000;
+                padding: 8px;
+                border-radius: 50%;
+
+                .circle {
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  background-image: linear-gradient(0deg,
+                      #16299e,
+                      #245cd0 50%,
+                      #3389ff);
+                }
+              }
+            }
+          }
+
+          .add-or-minus {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .right::-webkit-scrollbar {
+      /* 滚动条整体样式 */
+      width: 11px;
+      /* 高宽分别对应横竖滚动条的尺寸 */
+      height: 5px;
+    }
+
+    .right::-webkit-scrollbar-thumb {
+      /* 滚动条里面小方块 */
+      background: #2d7fe2;
+    }
+
+    .right::-webkit-scrollbar-track {
+      /* 滚动条里面轨道 */
+      background: #154780;
+    }
+  }
+}
+
+
+#alarm-confirm {
+  height: 100%;
+
+  .title {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      color: #fff;
+      margin-right: 5px;
+    }
+  }
+
+  .content {
+    margin-left: 50px;
+    margin-top: 30px;
+
+    .confirm-input {
+      width: 350px;
+      margin-top: 30px;
+      color: #0057C9;
+      font-size: 16px;
+    }
+  }
+
+  .button-group {
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
+    font-size: 16px;
+
+    .confirm {
+      color: #fff;
+      background-color: #0057C9;
+      border: none;
+    }
+
+    .cancel {
+      margin-right: 10px;
+      border: none;
+      background-color: #fff;
+      color: black;
+    }
+  }
+}
